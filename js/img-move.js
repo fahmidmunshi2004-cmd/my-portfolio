@@ -9,7 +9,7 @@ tilts.forEach(img => {
         const middleY = height / 2;
         const offsetX = (event.clientX - left - middleX) / middleX;
         const offsetY = (middleY - (event.clientY - top)) / middleY;
-        img.style.transform = `perspective(1000px) rotateY(${offsetX * 7}deg) rotateX(${offsetY * 7}deg) scale3d(1,1,1)`;
+        img.style.transform = `perspective(1000px) rotateY(${offsetX * 9}deg) rotateX(${offsetY * 9}deg) scale3d(1,1,1)`;
     });
     img.addEventListener("mouseleave", () => {
         img.style.transform = "perspective(1000px) rotateY(0deg) rotateX(0deg) scale3d(1,1,1)";

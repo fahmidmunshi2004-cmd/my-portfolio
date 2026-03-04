@@ -1,10 +1,6 @@
 tailwind.config = {
     theme: {
         extend: {
-            fontFamily: {
-                sans: ['"Albert Sans"', 'sans-serif'],
-            },
-
             maxWidth: {
                 '2lg': '1200px', // custom max-width
             },

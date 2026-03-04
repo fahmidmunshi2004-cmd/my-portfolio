@@ -71,7 +71,7 @@
 
 html,
 body {
-    font-family: "Albert Sans", sans-serif;
+    font-family: "Mulish", sans-serif;
     font-optical-sizing: auto;
     scroll-behavior: smooth;
     background: #ECF0F3;
@@ -169,4 +169,36 @@ input:-webkit-autofill:active {
 .custom_btn:hover::after {
     opacity: 1;
     visibility: visible;
+}
+
+.info-box {
+    background: var(--gradient-box-w);
+    box-shadow: var(--shadow-white-3);
+    padding: 35px 40px 40px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+.skill_img {
+    width: 80px;
+    height: 80px;
+    background: var(--gradient-box-w);
+    box-shadow: var(--shadow-white-3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+}
+.skill_img img{
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+}
+.skill_img_2 {
+    width: 60px;
+    height: 60px;
+}
+.skill_img_2 img{
+    width: 24px;
+    height: 24px;
 }
