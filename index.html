@@ -22,6 +22,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./tailwind.config.js"></script>
 
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
     <!-- custom CSS -->
     <link rel="stylesheet" href="./css/style.css">
 
@@ -50,12 +53,10 @@
                             src="./assets/images/portfolio-main-img/shakil-hossain-01.png" alt="">
                         <h1 class="text-[#1e2125] font-bold text-[56px] leading-[66px] mb-[22px]">
                             Hi, I’m <span class="text-primary">Shakil Hossain</span><br>
-                            <span class="text"></span>
+                            <span class="text text-[48px]"></span>
                         </h1>
                         <p class="text-lg text-[#3c3e41] font-medium mb-[60px]">
-                            I'm the Mobile Application Developer for #Company in Bangladesh, <br> OR. I have serious
-                            passion
-                            for UI effects, animations, and creating intuitive, dynamic user experiences.
+                            I'm a Mobile Application Developer specializing in Flutter in Bangladesh. <br> I have a serious passion for UI effects, animations, and creating intuitive, dynamic user experiences.
                         </p>
                         <div class="btn flex items-center gap-4">
                             <a href="https://docs.google.com/document/d/1m1mpIO962hQjlbZ_MohrPEqj-BrBqfkXaYcI3YxXL4U/export?format=pdf"
@@ -70,6 +71,7 @@
                 </div>
 
                 <div class="col-span-12 md:col-span-6 ml-2">
+
                     <div class="info-box">
                         <h2 class="text-[30px] text-[#3c3e41] font-bold mb-4 pb-4 border-b border-b-[#3c3e41]">
                             About Me
@@ -349,6 +351,180 @@
                         </ul>
                     </div>
 
+                    <div class="info-box">
+                        <div class="flex items-center justify-between mb-6 pb-5 border-b border-b-[#3c3e41]">
+                            <h2 class="text-[30px] text-[#3c3e41] font-bold">
+                                Testimonial
+                            </h2>
+                            <div class="btn flex items-center gap-4">
+                                <button
+                                    class="custom_btn testimonial_slide_button_prev !px-[19px] hover:!translate-y-0">
+                                    <i class="fa-solid fa-angle-left"></i>
+                                </button>
+                                <button
+                                    class="custom_btn testimonial_slide_button_next !px-[19px] hover:!translate-y-0">
+                                    <i class="fa-solid fa-angle-right"></i>
+                                </button>
+                            </div>
+                        </div>
+
+
+                        <div class="swiper testimonial_slide">
+                            <div class="swiper-wrapper">
+
+                                <div class="swiper-slide">
+                                    <div class="author_fdb">
+                                        <div class="flex items-center gap-2 mb-4">
+                                            <div class="img w-[50px] h-[50px] rounded-full bg-white overflow-hidden">
+                                                <img class="w-full h-full object-cover rounded-full"
+                                                    src="./assets/images/author/author-01.png" alt="">
+                                            </div>
+                                            <div class="name">
+                                                <h3 class="text-lg font-semibold text-primary">
+                                                    @Akif
+                                                    <span class="text-[14px] font-normal text-[#3c3e41]">
+                                                        Engineer
+                                                    </span>
+                                                </h3>
+                                            </div>
+                                        </div>
+                                        <div class="content">
+                                            <p class="discription text-base font-medium text-[#3c3e41]">
+                                                Working with Shakil Hossain was a great experience.<br>
+                                                <a href="#"
+                                                    class="underline transition-all duration-150 hover:text-primary">@Akif</a>
+                                                His problem-solving skills and attention to detail helped our project
+                                                move forward
+                                                quickly.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="author_fdb">
+                                        <div class="flex items-center gap-2 mb-4">
+                                            <div class="img w-[50px] h-[50px] rounded-full bg-white overflow-hidden">
+                                                <img class="w-full h-full object-cover rounded-full"
+                                                    src="./assets/images/author/author-02.png" alt="">
+                                            </div>
+                                            <div class="name">
+                                                <h3 class="text-lg font-semibold text-primary">
+                                                    @Fahim
+                                                    <span class="text-[14px] font-normal text-[#3c3e41]">
+                                                        Backend Developer
+                                                    </span>
+                                                </h3>
+                                            </div>
+                                        </div>
+                                        <div class="content">
+                                            <p class="discription text-base font-medium text-[#3c3e41]">
+                                                Working with Shakil Hossain was an outstanding experience.<br>
+                                                <a href="#"
+                                                    class="underline transition-all duration-150 hover:text-primary">@Fahim_Munna</a>
+                                                His backend expertise, attention to detail, and problem-solving skills
+                                                made our project smooth
+                                                and efficient from start to finish.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="author_fdb">
+                                        <div class="flex items-center gap-2 mb-4">
+                                            <div class="img w-[50px] h-[50px] rounded-full bg-white overflow-hidden">
+                                                <img class="w-full h-full object-cover rounded-full"
+                                                    src="./assets/images/author/author-03.png" alt="">
+                                            </div>
+                                            <div class="name">
+                                                <h3 class="text-lg font-semibold text-primary">
+                                                    @Tarik
+                                                    <span class="text-[14px] font-normal text-[#3c3e41]">
+                                                        Flutter Developer
+                                                    </span>
+                                                </h3>
+                                            </div>
+                                        </div>
+                                        <div class="content">
+                                            <p class="discription text-base font-medium text-[#3c3e41]">
+                                                Working with
+                                                <a href="#"
+                                                    class="underline transition-all duration-150 hover:text-primary">@Tarik</a>
+                                                was a great experience. His
+                                                problem-solving skills and attention to detail helped our project move
+                                                forward quickly.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="author_fdb">
+                                        <div class="flex items-center gap-2 mb-4">
+                                            <div class="img w-[50px] h-[50px] rounded-full bg-white overflow-hidden">
+                                                <img class="w-full h-full object-cover rounded-full"
+                                                    src="./assets/images/author/author-05.png" alt="">
+                                            </div>
+                                            <div class="name">
+                                                <h3 class="text-lg font-semibold text-primary">
+                                                    @Sohan
+                                                    <span class="text-[14px] font-normal text-[#3c3e41]">
+                                                        HR
+                                                    </span>
+                                                </h3>
+                                            </div>
+                                        </div>
+                                        <div class="content">
+                                            <p class="discription text-base font-medium text-[#3c3e41]">
+                                                Working with
+                                                <a href="#"
+                                                    class="underline transition-all duration-150 hover:text-primary">@Sohan</a>
+                                                was a great experience. His
+                                                problem-solving skills and attention to detail helped our project move
+                                                forward quickly.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="author_fdb">
+                                        <div class="flex items-center gap-2 mb-4">
+                                            <div class="img w-[50px] h-[50px] rounded-full bg-white overflow-hidden">
+                                                <img class="w-full h-full object-cover rounded-full"
+                                                    src="./assets/images/author/author-04.png" alt="">
+                                            </div>
+                                            <div class="name">
+                                                <h3 class="text-lg font-semibold text-primary">
+                                                    @nayeem
+                                                    <span class="text-[14px] font-normal text-[#3c3e41]">
+                                                        UI/UX
+                                                    </span>
+                                                </h3>
+                                            </div>
+                                        </div>
+                                        <div class="content">
+                                            Working with <a href="#"
+                                                class="underline transition-all duration-150 hover:text-primary">@nayeem</a>
+                                            was a fantastic experience. His UI/UX expertise and attention to detail
+                                            helped our project move forward smoothly and efficiently.
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="testimonial_pagination flex items-center gap-[2px] mt-4 justify-center"></div>
+                        </div>
+                    </div>
+
+                    <div class="info-box">
+                        <h2 class="text-[30px] text-[#3c3e41] font-bold mb-4 pb-4 border-b border-b-[#3c3e41]">
+                            Contact With Me
+                        </h2>
+                    </div>
+
+
                 </div>
 
             </div>
@@ -360,6 +536,8 @@
 
     <!-- script link -->
     <script src="./js/img-move.js"></script>
+
+    <!-- typed cdn -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
         var typing = new Typed(".text", {
@@ -368,6 +546,32 @@
             backSpeed: 50,
             backDelay: 1500,
             loop: true,
+        });
+    </script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".testimonial_slide", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            speed: 800,
+            effect: "slide",
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".testimonial_pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".testimonial_slide_button_next",
+                prevEl: ".testimonial_slide_button_prev",
+            },
         });
     </script>
 </body>

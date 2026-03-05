@@ -191,16 +191,36 @@ input:-webkit-autofill:active {
     justify-content: center;
     border-radius: 6px;
 }
-.skill_img img{
+
+.skill_img img {
     width: 32px;
     height: 32px;
     object-fit: cover;
 }
+
 .skill_img_2 {
     width: 60px;
     height: 60px;
 }
-.skill_img_2 img{
+
+.skill_img_2 img {
     width: 24px;
     height: 24px;
+}
+
+
+/*=============== swiper-pagination-bullet ================*/
+.testimonial_pagination .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #4a5f70;
+    transition: .3s linear;
+}
+
+.testimonial_pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: var(--color-primary);
+    width: 20px;
+    height: 8px;
+    border-radius: 12px;
 }
