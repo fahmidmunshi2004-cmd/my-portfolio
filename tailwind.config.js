@@ -2,7 +2,7 @@ tailwind.config = {
     theme: {
         extend: {
             maxWidth: {
-                '2lg': '1200px', // custom max-width
+                '2lg': '1250px', // custom max-width
             },
             colors: {
                 primary: 'var(--color-primary)',
