@@ -17,6 +17,31 @@ body.dark .input-box label {
     color: #ffffff8c;
 }
 
+body.dark .input-box textarea:focus+label,
+body.dark .input-box input:focus+label,
+body.dark .input-box textarea:valid+label,
+body.dark .input-box input:valid+label {
+    color: var(--color-gray);
+    background: var(--color-primary);
+    border-radius: 10px;
+}
+
+body.dark .input-box textarea:focus,
+body.dark .input-box input:focus {
+    border-color: var(--color-primary);
+    background: #00000033;
+}
+
+body.dark input:-webkit-autofill,
+body.dark input:-webkit-autofill:hover,
+body.dark input:-webkit-autofill:focus,
+body.dark input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 1000px rgb(29, 28, 28) inset !important;
+    box-shadow: 0 0 0 1000px rgb(29, 28, 28) inset !important;
+    -webkit-text-fill-color: #ffffff !important;
+    transition: background-color 9999s ease-in-out 0s;
+}
+
 body.dark .input-box textarea,
 body.dark .input-box input {
     border: 2px solid #ffffff25;
