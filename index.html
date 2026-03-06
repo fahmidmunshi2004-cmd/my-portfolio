@@ -36,8 +36,68 @@
 
 <body>
     <!-- header-area -->
-    <header class="h-[200px]">
+    <header
+        class="mb-10 py-4  backdrop-blur-[24px] bg-[#ffffff75] shadow-[0_1px_4px_0_rgba(0,0,0,0.06)] sticky top-0 z-[9]">
+        <div class="max-w-2lg mx-4 xl:mx-auto">
+            <div class="grid grid-cols-12 items-center">
 
+                <!-- logo -->
+                <div class="col-span-2">
+                    <div class="logo">
+                        <a href="#" class="flex items-center justify-start">
+                            <img class="w-[65px]" src="./assets/logo/header-logo.png" alt="">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- menu -->
+                <div class="col-span-1 md:col-span-8">
+                    <div class="main-menu hidden md:block">
+                        <nav>
+                            <ul class="flex items-center gap-5 xl:gap-10 justify-center">
+                                <li>
+                                    <a href="./index.html"
+                                        class="text-base font-normal custom__border overflow-hidden py-[2px]  inline-block active">
+                                        <span class="explore-text" data-text="Home">Home</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#about"
+                                        class="text-base font-normal custom__border overflow-hidden py-[2px] inline-block">
+                                        <span class="explore-text" data-text="About">About</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#services"
+                                        class="text-base font-normal custom__border overflow-hidden py-[2px] inline-block">
+                                        <span class="explore-text" data-text="Services">Services</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#blog"
+                                        class="text-base font-normal custom__border overflow-hidden py-[2px] inline-block">
+                                        <span class="explore-text" data-text="Blog">Blog</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#Skill"
+                                        class="text-base font-normal custom__border overflow-hidden py-[2px] inline-block">
+                                        <span class="explore-text" data-text="Skill">Skill</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+                <!-- button -->
+                 <div class="col-span-2 ml-auto">
+                     <a href="#contact" class="custom_btn w-max justify-center">
+                         Contact Me
+                     </a>
+                 </div>
+            </div>
+        </div>
     </header>
 
     <!-- portfolio info -->
@@ -48,7 +108,7 @@
             <div class="grid grid-cols-12 gap-10">
 
                 <div class="col-span-12 md:col-span-6">
-                    <div class="left_content mb-[100px] sticky top-10">
+                    <div class="left_content mb-[100px] sticky top-[140px]">
                         <img class="tilt cursor-pointer w-[180px] h-[180px] border-[5px] border-primary rounded-full object-cover mb-7"
                             src="./assets/images/portfolio-main-img/shakil-hossain-01.png" alt="">
                         <h1 class="text-[#1e2125] font-bold text-[56px] leading-[66px] mb-[22px]">
@@ -73,8 +133,8 @@
                 </div>
 
                 <div class="col-span-12 md:col-span-6 ml-2">
-
-                    <div class="info-box">
+                    <!-- about me -->
+                    <div id="about" class="info-box">
                         <h2 class="text-[30px] text-[#3c3e41] font-bold mb-4 pb-4 border-b border-b-[#3c3e41]">
                             About Me
                         </h2>
@@ -91,7 +151,8 @@
                         </p>
                     </div>
 
-                    <div class="info-box">
+                    <!-- My Skill -->
+                    <div id="Skill" class="info-box">
                         <h2 class="text-[30px] text-[#3c3e41] font-bold mb-4 pb-4 border-b border-b-[#3c3e41]">
                             About My Skill
                         </h2>
@@ -209,7 +270,8 @@
 
                     </div>
 
-                    <div class="info-box">
+                    <!-- My Services -->
+                    <div id="services" class="info-box">
                         <h2 class="text-[30px] text-[#3c3e41] font-bold mb-4 pb-4 border-b border-b-[#3c3e41]">
                             My Services
                         </h2>
@@ -257,7 +319,8 @@
                         </ul>
                     </div>
 
-                    <div class="info-box">
+                    <!-- My Portfolio -->
+                    <div id="portfolio" class="info-box">
                         <h2 class="text-[30px] text-[#3c3e41] font-bold mb-4 pb-4 border-b border-b-[#3c3e41]">
                             My Portfolio
                         </h2>
@@ -305,7 +368,8 @@
                         </ul>
                     </div>
 
-                    <div class="info-box">
+                    <!-- My Blog -->
+                    <div id="blog" class="info-box">
                         <h2 class="text-[30px] text-[#3c3e41] font-bold mb-4 pb-4 border-b border-b-[#3c3e41]">
                             My Blog
                         </h2>
@@ -353,7 +417,8 @@
                         </ul>
                     </div>
 
-                    <div class="info-box">
+                    <!-- Testimonial -->
+                    <div id="testimonial" class="info-box">
                         <div class="flex items-center justify-between mb-6 pb-5 border-b border-b-[#3c3e41]">
                             <h2 class="text-[30px] text-[#3c3e41] font-bold">
                                 Testimonial
@@ -520,7 +585,8 @@
                         </div>
                     </div>
 
-                    <div class="info-box">
+                    <!-- Contact With Me -->
+                    <div id="contact" class="info-box">
                         <h2 class="text-[30px] text-[#3c3e41] font-bold mb-4 pb-4 border-b border-b-[#3c3e41]">
                             Contact With Me
                         </h2>
@@ -559,9 +625,11 @@
                                     </div>
                                 </div>
                                 <a href="#" class="custom_btn uppercase w-max gap-2 group">
-                                    <i class="fa-solid fa-arrow-right group-hover:opacity-[1] group-hover:visible group-hover:translate-x-0 translate-x-[-8px] opacity-0 invisible transition duration-300"></i>
+                                    <i
+                                        class="fa-solid fa-arrow-right group-hover:opacity-[1] group-hover:visible group-hover:translate-x-0 translate-x-[-8px] opacity-0 invisible transition duration-300"></i>
                                     SEND MESSAGE
-                                    <i class="fa-solid fa-arrow-right group-hover:opacity-0 group-hover:invisible group-hover:translate-x-[10px] transition duration-300"></i>
+                                    <i
+                                        class="fa-solid fa-arrow-right group-hover:opacity-0 group-hover:invisible group-hover:translate-x-[10px] transition duration-300"></i>
                                 </a>
                             </form>
                         </div>
