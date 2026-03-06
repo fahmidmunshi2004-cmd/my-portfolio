@@ -27,6 +27,7 @@
 
     <!-- custom CSS -->
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/dark-mode.css">
 
     <!-- fav icon -->
     <link rel="shortcut icon" href="./assets/icons/fav-icon/shakil-removebg-preview 1.png" type="image/x-icon">
@@ -36,8 +37,7 @@
 
 <body>
     <!-- header-area -->
-    <header
-        class="mb-10 py-4  backdrop-blur-[24px] bg-[#ffffff75] shadow-[0_1px_4px_0_rgba(0,0,0,0.06)] sticky top-0 z-[9]">
+    <header class="mb-10 !py-4  info-box !rounded-[0] sticky top-0 z-[9]">
         <div class="max-w-2lg mx-4 xl:mx-auto">
             <div class="grid grid-cols-12 items-center">
 
@@ -56,7 +56,7 @@
                         <nav>
                             <ul class="flex items-center gap-5 xl:gap-10 justify-center">
                                 <li>
-                                    <a href="./index.html"
+                                    <a href="#"
                                         class="text-base font-normal custom__border overflow-hidden py-[2px]  inline-block active">
                                         <span class="explore-text" data-text="Home">Home</span>
                                     </a>
@@ -91,11 +91,27 @@
                 </div>
 
                 <!-- button -->
-                 <div class="col-span-2 ml-auto">
-                     <a href="#contact" class="custom_btn w-max justify-center">
-                         Contact Me
-                     </a>
-                 </div>
+                <div class="col-span-2 ml-auto flex items-center gap-2">
+                    <a href="#contact" class="custom_btn w-max justify-center">
+                        Contact Me
+                    </a>
+                    <button id="modeBtn" class="custom_btn !p-0">
+                        <svg class="icon sun" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                        <svg class="icon moon" viewBox="0 0 24 24">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </button>
+                </div>
             </div>
         </div>
     </header>
@@ -644,7 +660,6 @@
     </section>
 
 
-
     <!-- script link -->
     <script src="./js/img-move.js"></script>
 
@@ -685,6 +700,9 @@
             },
         });
     </script>
+
+    <!-- dark mode -->
+     <script src="./js/dark-mode.js"></script>
 </body>
 
 </html>

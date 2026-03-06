@@ -108,7 +108,7 @@ input:-webkit-autofill:active {
     content: "";
     background: var(--color-primary);
     width: 0;
-    height: 1px;
+    height: 2px;
     left: 50%;
     transform: translateX(-50%);
     bottom: 0;
@@ -305,6 +305,7 @@ a:hover .explore-text::before {
     transition: .3s;
     pointer-events: none;
 }
+
 .input-box.textarea-box label {
     top: 14%;
 }
@@ -342,7 +343,7 @@ a:hover .explore-text::before {
     text-transform: uppercase;
 }
 
-.input-group textarea{
+.input-group textarea {
     height: 220px;
     padding: 20px;
 }
