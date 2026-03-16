@@ -48,7 +48,7 @@ function toggleTheme() {
         document.body.classList.remove("dark");
         localStorage.setItem("theme", "light");
     } else {
-        document.body.classList.add("dark");
+        document.body.classList.add("dark"); 
         localStorage.setItem("theme", "dark");
     }
 }

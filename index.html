@@ -14,10 +14,6 @@
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-
-    <!-- fav icon link -->
-    <link rel="shortcut icon" href="./assets/icons/fav-icon/fav-icon.png" type="image/x-icon">
-
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./tailwind.config.js"></script>
@@ -28,14 +24,88 @@
     <!-- custom CSS -->
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/dark-mode.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="./css/offcanvas.css">
 
     <!-- fav icon -->
-    <link rel="shortcut icon" href="./assets/icons/fav-icon/shakil-removebg-preview 1.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/icons/fav-icon/fav-icon.png" type="image/x-icon">
 
 
 </head>
 
 <body>
+
+    <!-- offcanvas start -->
+    <div class="tp-offcanvas-area block lg:hidden max-[350px]:w-full">
+        <div class="tp-offcanvas-wrapper h-full">
+            <div class="tp-offcanvas-header flex items-center justify-between mb-6 pb-6 border-b border-gray-500">
+                <div class="tp-offcanvas-logo">
+                    <a href="javascript:void(0)">
+                        <img class="w-[60px]" src="./assets/logo/header-logo.png" alt="">
+                    </a>
+                </div>
+                <div class="tp-offcanvas-close flex items-center justify-center">
+                    <div class="common-btn p-0 bg-transparent">
+                        <button
+                            class="text-base font-medium text-primary h-8 w-8 flex items-center gap-4 justify-center border-[1.5px] border-white rounded-[6px]">
+                            <i class="fa-solid fa-xmark !text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- menu -->
+            <div class="col-span-1 lg:col-span-8">
+                <div class="main-menu block lg:hidden">
+                    <nav>
+                        <ul class="flex flex-col items-start gap-2 justify-start">
+                            <li class="w-full">
+                                <a href="#"
+                                    class="text-base font-normal custom__border overflow-hidden py-[2px] inline-block bg-black w-full !p-3 !pt-2 !pb-2 rounded-[8px]">
+                                    <span class="explore-text" data-text="Home">Home</span>
+                                </a>
+                            </li>
+                            <li class="w-full">
+                                <a href="#about"
+                                    class="text-base font-normal custom__border overflow-hidden py-[2px] inline-block bg-black w-full !p-3 !pt-2 !pb-2 rounded-[8px]">
+                                    <span class="explore-text" data-text="About">About</span>
+                                </a>
+                            </li>
+                            <li class="w-full">
+                                <a href="#services"
+                                    class="text-base font-normal custom__border overflow-hidden py-[2px] inline-block bg-black w-full !p-3 !pt-2 !pb-2 rounded-[8px]">
+                                    <span class="explore-text" data-text="Services">Services</span>
+                                </a>
+                            </li>
+                            <li class="w-full">
+                                <a href="#blog"
+                                    class="text-base font-normal custom__border overflow-hidden py-[2px] inline-block bg-black w-full !p-3 !pt-2 !pb-2 rounded-[8px]">
+                                    <span class="explore-text" data-text="Blog">Blog</span>
+                                </a>
+                            </li>
+                            <li class="w-full">
+                                <a href="#Skill"
+                                    class="text-base font-normal custom__border overflow-hidden py-[2px] inline-block bg-black w-full !p-3 !pt-2 !pb-2 rounded-[8px]">
+                                    <span class="explore-text" data-text="Skill">Skill</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div
+                class="copy__right__area absolute bottom-0 left-1/2 -translate-x-1/2 w-full flex flex-col h-full items-center justify-end z-[-1]">
+                <p class="text-base font-normal text-[rgba(255,255,255,0.4)]">
+                    ⓒ 2026
+                    <a href="#" class="custom__border text-primary font-bold">Shakil</a>
+                    All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="modal_backdrop modal_backdrop_2 opacity-0 invisible block md:hidden"></div>
+
+    <!-- offcanvas end -->
+
     <!-- header-area -->
     <header class="mb-10 !py-4  info-box !rounded-[0] sticky top-0 z-[9]">
         <div class="max-w-2lg mx-4 xl:mx-auto">
@@ -51,8 +121,8 @@
                 </div>
 
                 <!-- menu -->
-                <div class="col-span-1 md:col-span-8">
-                    <div class="main-menu hidden md:block">
+                <div class="col-span-1 lg:col-span-7">
+                    <div class="main-menu hidden lg:block">
                         <nav>
                             <ul class="flex items-center gap-5 xl:gap-10 justify-center">
                                 <li>
@@ -91,10 +161,7 @@
                 </div>
 
                 <!-- button -->
-                <div class="col-span-2 ml-auto flex items-center gap-4">
-                    <a href="#contact" class="custom_btn w-max justify-center">
-                        Contact Me
-                    </a>
+                <div class="col-span-9 lg:col-span-3 ml-auto flex flex-wrap justify-end items-center gap-4">
                     <button id="modeBtn" class="custom_btn !p-0">
                         <svg class="icon sun" viewBox="0 0 24 24">
                             <circle cx="12" cy="12" r="5"></circle>
@@ -111,6 +178,12 @@
                             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                         </svg>
                     </button>
+                    <a href="#contact" class="custom_btn w-max justify-center">
+                        Contact Me
+                    </a>
+                    <a href="#contact" class="custom_btn justify-center p-0 w-12 rs-offcanvas-btn flex lg:hidden">
+                        <i class="fa-solid fa-bars"></i>
+                    </a>
                 </div>
             </div>
         </div>
@@ -121,18 +194,21 @@
     <!-- my info -->
     <section class="my-info">
         <div class="max-w-2lg mx-4 xl:mx-auto">
-            <div class="grid grid-cols-12 gap-10">
+            <div class="grid grid-cols-12 gap-4 md:gap-10">
 
-                <div class="col-span-12 md:col-span-6">
-                    <div class="left_content mb-[100px] sticky top-[140px]">
+                <div class="col-span-12 lg:col-span-6">
+                    <div
+                        class="left_content flex flex-col justify-center items-center lg:block  mb-[100px] sticky top-[140px]">
                         <img class="tilt cursor-pointer w-[180px] h-[180px] border-[5px] border-primary rounded-full object-cover mb-7"
                             src="./assets/images/portfolio-main-img/shakil-hossain-01.png" alt="">
-                        <h1 class="text-[#1e2125] font-bold text-[56px] leading-[66px] mb-[22px]">
+                        <h1
+                            class="text-[#1e2125] text-center lg:text-start font-bold text-3xl lg:text-[56px] lg:leading-[66px] mb-[22px]">
                             Hi, I’m <span class="text-primary">Shakil Hossain</span><br>
-                            <span class="text text-[48px]"></span>
+                            <span class="text text-2xl lg:text-[48px]"></span>
                         </h1>
-                        <p class="text-lg text-[#3c3e41] font-medium mb-[60px]">
-                            I'm a Mobile Application Developer specializing in Flutter in Bangladesh. <br> I have a
+                        <p class="text-lg text-center lg:text-start text-[#3c3e41] font-medium mb-6 lg:mb-[60px]">
+                            I'm a Mobile Application Developer specializing in Flutter in Bangladesh. <br
+                                class="hidden lg:block"> I have a
                             serious passion for UI effects, animations, and creating intuitive, dynamic user
                             experiences.
                         </p>
@@ -148,14 +224,14 @@
                     </div>
                 </div>
 
-                <div class="col-span-12 md:col-span-6 ml-2">
+                <div class="col-span-12 lg:col-span-6 lg:ml-2">
                     <!-- about me -->
                     <div id="about" class="info-box">
-                        <h2 class="text-[30px] text-[#3c3e41] font-bold mb-4 pb-4 border-b border-b-[#3c3e41]">
+                        <h2 class="text-[30px] text-primary  font-bold mb-4 pb-4 border-b border-b-[#3c3e41]">
                             About Me
                         </h2>
                         <p class="text-base text-[#3c3e41] font-medium mb-5">
-                            I am a cross-platform mobile application developer with 1.5 years of experience specializing
+                            I am a cross-platform mobile application developer with 2 years of experience specializing
                             in Flutter. I have successfully collaborated with teams and clients to understand business
                             requirements and deliver tailored solutions. My portfolio includes e-commerce, LMS (Learning
                             Management System), and Number One Laundry apps.
@@ -169,13 +245,13 @@
 
                     <!-- My Skill -->
                     <div id="Skill" class="info-box">
-                        <h2 class="text-[30px] text-[#3c3e41] font-bold mb-4 pb-4 border-b border-b-[#3c3e41]">
+                        <h2 class="text-[30px] text-primary  font-bold mb-4 pb-4 border-b border-b-[#3c3e41]">
                             About My Skill
                         </h2>
                         <span class="text-[14px] uppercase tracking-[2px] mb-5 block">
                             Primary Skills on
                         </span>
-                        <div class="icon grid grid-cols-12 gap-10 justify-items-center">
+                        <div class="icon grid grid-cols-12 gap-4 md:gap-10 justify-items-center Skill-icon-wrepper">
                             <div class="col-span-3">
                                 <div class="skill_img">
                                     <img src="./assets/icons/my-skill/skill-icon-1.png" alt="">
@@ -237,7 +313,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="icon grid grid-cols-5 gap-8 justify-items-center">
+                        <div class="icon grid grid-cols-5 gap-4 lg:gap-8 justify-items-center  Skill-icon-wrepper">
                             <span
                                 class="text-[14px] col-span-5 uppercase tracking-[2px] mt-8 w-full translate-y-2 block">
                                 Secondary Skills on
@@ -288,7 +364,7 @@
 
                     <!-- My Services -->
                     <div id="services" class="info-box">
-                        <h2 class="text-[30px] text-[#3c3e41] font-bold mb-4 pb-4 border-b border-b-[#3c3e41]">
+                        <h2 class="text-[30px] text-primary  font-bold mb-4 pb-4 border-b border-b-[#3c3e41]">
                             My Services
                         </h2>
                         <ul class="space-y-4">
@@ -337,7 +413,7 @@
 
                     <!-- My Portfolio -->
                     <div id="portfolio" class="info-box">
-                        <h2 class="text-[30px] text-[#3c3e41] font-bold mb-4 pb-4 border-b border-b-[#3c3e41]">
+                        <h2 class="text-[30px] text-primary  font-bold mb-4 pb-4 border-b border-b-[#3c3e41]">
                             My Portfolio
                         </h2>
                         <ul class="space-y-4">
@@ -386,7 +462,7 @@
 
                     <!-- My Blog -->
                     <div id="blog" class="info-box">
-                        <h2 class="text-[30px] text-[#3c3e41] font-bold mb-4 pb-4 border-b border-b-[#3c3e41]">
+                        <h2 class="text-[30px] text-primary  font-bold mb-4 pb-4 border-b border-b-[#3c3e41]">
                             My Blog
                         </h2>
                         <ul class="space-y-4">
@@ -436,7 +512,7 @@
                     <!-- Testimonial -->
                     <div id="testimonial" class="info-box">
                         <div class="flex items-center justify-between mb-6 pb-5 border-b border-b-[#3c3e41]">
-                            <h2 class="text-[30px] text-[#3c3e41] font-bold">
+                            <h2 class="text-[30px] text-primary  font-bold">
                                 Testimonial
                             </h2>
                             <div class="btn flex items-center gap-4">
@@ -603,13 +679,13 @@
 
                     <!-- Contact With Me -->
                     <div id="contact" class="info-box">
-                        <h2 class="text-[30px] text-[#3c3e41] font-bold mb-4 pb-4 border-b border-b-[#3c3e41]">
+                        <h2 class="text-[30px] text-primary  font-bold mb-4 pb-4 border-b border-b-[#3c3e41]">
                             Contact With Me
                         </h2>
                         <div class="form">
                             <form action="#">
-                                <div class="grid grid-cols-2 gap-6">
-                                    <div class="input-group mb-6 col-span-1">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div class="input-group md:mb-6 col-span-1">
                                         <div class="relative input-box">
                                             <input type="text" id="username" required>
                                             <label for="username">Your Name</label>
@@ -652,6 +728,125 @@
                     </div>
 
 
+                </div>
+
+            </div>
+            <!-- my gallery -->
+            <div class="grid grid-cols-12 gap-5 mb-6 my-gallery">
+
+                <!-- section title -->
+                <div class="col-span-12 section-title text-center mb-6 text-primary">
+                    <h2 class="text-3xl lg:text-[36px] font-bold mb-3">
+                        Captured Moments
+                    </h2>
+                    <p class="text-base text-[#3c3e41] mx-auto">
+                        A collection of some memorable moments and personal photos<br>
+                        that reflect my journey, lifestyle, and experiences.
+                    </p>
+                </div>
+
+                <!-- item 1 -->
+                <div class="col-span-6 lg:col-span-4 xl:col-span-3">
+                    <div class="gallery-box group info-box !p-4 relative overflow-hidden group w-full mb-0 h-full">
+                        <div class="img overflow-hidden rounded-[12px]">
+                            <img class="tilt cursor-pointer rounded-[10px] w-full h-[180px] object-cover"
+                                src="./assets/images/gallery/gallery-01.jpeg" alt="">
+                        </div>
+                        <div class="mt-4">
+                            <h3 class="text-2xl font-semibold mb-2 group-hover:text-primary transition duration-200">
+                                <a href="#">Personal Moment</a>
+                            </h3>
+                            <p class="text-base font-medium text-[#3c3e41] mb-6">
+                                A simple personal moment captured during
+                                my daily life and memorable experiences.
+                            </p>
+                            <a href="#" class="custom_btn uppercase gap-2 group w-full">
+                                <i
+                                    class="fa-solid fa-arrow-right group-hover:opacity-[1] group-hover:visible group-hover:translate-x-0 translate-x-[-8px] opacity-0 invisible transition duration-300"></i>
+                                View Project
+                                <i
+                                    class="fa-solid fa-arrow-right group-hover:opacity-0 group-hover:invisible group-hover:translate-x-[10px] transition duration-300"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- item 2 -->
+                <div class="col-span-6 lg:col-span-4 xl:col-span-3">
+                    <div class="gallery-box group info-box !p-4 relative overflow-hidden group w-full mb-0 h-full">
+                        <div class="img overflow-hidden rounded-[12px]">
+                            <img class="tilt cursor-pointer rounded-[10px] w-full h-[180px] object-cover"
+                                src="./assets/images/gallery/gallery-02.jpeg" alt="">
+                        </div>
+                        <div class="mt-4">
+                            <h3 class="text-2xl font-semibold mb-2 group-hover:text-primary transition duration-200">
+                                <a href="#">Travel Memory</a>
+                            </h3>
+                            <p class="text-base font-medium text-[#3c3e41] mb-6">
+                                A travel memory captured while exploring
+                                new places and enjoying beautiful moments.
+                            </p>
+                            <a href="#" class="custom_btn uppercase gap-2 group w-full">
+                                <i
+                                    class="fa-solid fa-arrow-right group-hover:opacity-[1] group-hover:visible group-hover:translate-x-0 translate-x-[-8px] opacity-0 invisible transition duration-300"></i>
+                                View Project
+                                <i
+                                    class="fa-solid fa-arrow-right group-hover:opacity-0 group-hover:invisible group-hover:translate-x-[10px] transition duration-300"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- item 3 -->
+                <div class="col-span-6 lg:col-span-4 xl:col-span-3">
+                    <div class="gallery-box group info-box !p-4 relative overflow-hidden group w-full mb-0 h-full">
+                        <div class="img overflow-hidden rounded-[12px]">
+                            <img class="tilt cursor-pointer rounded-[10px] w-full h-[180px] object-cover"
+                                src="./assets/images/gallery/gallery-03.jpeg" alt="">
+                        </div>
+                        <div class="mt-4">
+                            <h3 class="text-2xl font-semibold mb-2 group-hover:text-primary transition duration-200">
+                                <a href="#">Life Snapshot</a>
+                            </h3>
+                            <p class="text-base font-medium text-[#3c3e41] mb-6">
+                                A small snapshot from my personal life
+                                reflecting natural and meaningful moments.
+                            </p>
+                            <a href="#" class="custom_btn uppercase gap-2 group w-full">
+                                <i
+                                    class="fa-solid fa-arrow-right group-hover:opacity-[1] group-hover:visible group-hover:translate-x-0 translate-x-[-8px] opacity-0 invisible transition duration-300"></i>
+                                View Project
+                                <i
+                                    class="fa-solid fa-arrow-right group-hover:opacity-0 group-hover:invisible group-hover:translate-x-[10px] transition duration-300"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- item 4 -->
+                <div class="col-span-6 lg:col-span-4 xl:col-span-3">
+                    <div class="gallery-box group info-box !p-4 relative overflow-hidden group w-full mb-0 h-full">
+                        <div class="img overflow-hidden rounded-[12px]">
+                            <img class="tilt cursor-pointer rounded-[10px] w-full h-[180px] object-cover"
+                                src="./assets/images/gallery/gallery-04.jpeg" alt="">
+                        </div>
+                        <div class="mt-4">
+                            <h3 class="text-2xl font-semibold mb-2 group-hover:text-primary transition duration-200">
+                                <a href="#">Daily Lifestyle</a>
+                            </h3>
+                            <p class="text-base font-medium text-[#3c3e41] mb-6">
+                                A glimpse of my everyday lifestyle and
+                                the moments that make life special.
+                            </p>
+                            <a href="#" class="custom_btn uppercase gap-2 group w-full">
+                                <i
+                                    class="fa-solid fa-arrow-right group-hover:opacity-[1] group-hover:visible group-hover:translate-x-0 translate-x-[-8px] opacity-0 invisible transition duration-300"></i>
+                                View Project
+                                <i
+                                    class="fa-solid fa-arrow-right group-hover:opacity-0 group-hover:invisible group-hover:translate-x-[10px] transition duration-300"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -701,8 +896,14 @@
         });
     </script>
 
+    <!-- offcanvas -->
+    <script src="./js/offcanvas.js"></script>
+
     <!-- dark mode -->
-     <script src="./js/dark-mode.js"></script>
+    <script src="./js/dark-mode.js"></script>
+
+    <!-- clamp -->
+    <script src="https://cdn.tailwindcss.com?plugins=line-clamp"></script>
 </body>
 
 </html>
