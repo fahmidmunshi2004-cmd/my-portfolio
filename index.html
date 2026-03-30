@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/dark-mode.css">
     <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="./css/scrool-to-top.css">
     <link rel="stylesheet" href="./css/offcanvas.css">
 
     <!-- fav icon -->
@@ -34,6 +35,46 @@
 </head>
 
 <body>
+
+    <!-- scrollToTop -->
+    <div class="scrollToTop active-progress">
+        <div class="arrowUp">
+            <i class="fa-solid fa-arrow-up"></i>
+        </div>
+        <div class="water" style="transform: translate(0px, 47%);">
+            <svg viewBox="0 0 560 20" class="water_wave water_wave_back">
+                <use xlink:href="#wave"></use>
+            </svg>
+            <svg viewBox="0 0 560 20" class="water_wave water_wave_front">
+                <use xlink:href="#wave"></use>
+            </svg>
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 560 20" style="display: none;">
+                <symbol id="wave">
+                    <path
+                        d="M420,20c21.5-0.4,38.8-2.5,51.1-4.5c13.4-2.2,26.5-5.2,27.3-5.4C514,6.5,518,4.7,528.5,2.7c7.1-1.3,17.9-2.8,31.5-2.7c0,0,0,0,0,0v20H420z"
+                        fill="#"
+                        style="transition: stroke-dashoffset 10ms linear; stroke-dasharray: 301.839, 301.839; stroke-dashoffset: 140.858px;">
+                    </path>
+                    <path
+                        d="M420,20c-21.5-0.4-38.8-2.5-51.1-4.5c-13.4-2.2-26.5-5.2-27.3-5.4C326,6.5,322,4.7,311.5,2.7C304.3,1.4,293.6-0.1,280,0c0,0,0,0,0,0v20H420z"
+                        fill="#"
+                        style="transition: stroke-dashoffset 10ms linear; stroke-dasharray: 301.839, 301.839; stroke-dashoffset: 140.858px;">
+                    </path>
+                    <path
+                        d="M140,20c21.5-0.4,38.8-2.5,51.1-4.5c13.4-2.2,26.5-5.2,27.3-5.4C234,6.5,238,4.7,248.5,2.7c7.1-1.3,17.9-2.8,31.5-2.7c0,0,0,0,0,0v20H140z"
+                        fill="#"
+                        style="transition: stroke-dashoffset 10ms linear; stroke-dasharray: 301.839, 301.839; stroke-dashoffset: 140.858px;">
+                    </path>
+                    <path
+                        d="M140,20c-21.5-0.4-38.8-2.5-51.1-4.5c-13.4-2.2-26.5-5.2-27.3-5.4C46,6.5,42,4.7,31.5,2.7C24.3,1.4,13.6-0.1,0,0c0,0,0,0,0,0l0,20H140z"
+                        fill="#"
+                        style="transition: stroke-dashoffset 10ms linear; stroke-dasharray: 301.839, 301.839; stroke-dashoffset: 140.858px;">
+                    </path>
+                </symbol>
+            </svg>
+        </div>
+    </div>
 
     <!-- offcanvas start -->
     <div class="tp-offcanvas-area block lg:hidden max-[350px]:w-full">
@@ -103,7 +144,6 @@
         </div>
     </div>
     <div class="modal_backdrop modal_backdrop_2 opacity-0 invisible block md:hidden"></div>
-
     <!-- offcanvas end -->
 
     <!-- header-area -->
@@ -121,10 +161,10 @@
                 </div>
 
                 <!-- menu -->
-                <div class="col-span-0 hidden lg:block lg:col-span-7">
+                <div class="col-span-0 hidden lg:block lg:col-span-5">
                     <div class="main-menu hidden lg:block">
                         <nav>
-                            <ul class="flex items-center gap-5 xl:gap-10 justify-center">
+                            <ul class="flex items-center gap-5 xl:gap-10 justify-start">
                                 <li>
                                     <a href="#"
                                         class="text-base font-normal custom__border overflow-hidden py-[2px]  inline-block active">
@@ -161,7 +201,27 @@
                 </div>
 
                 <!-- button -->
-                <div class="col-span-10 lg:col-span-3 ml-auto flex flex-wrap justify-end items-center gap-4">
+                <div class="col-span-10 lg:col-span-5 ml-auto flex flex-wrap justify-end items-center gap-4 lg:gap-5">
+
+                    <div class="flex md:flex-col gap-2">
+
+                        <!-- Phone -->
+                        <a href="tel:+8801700968371"
+                            class="flex items-center gap-2 text-[#3c3e41] hover:text-[#ff014f] transition">
+                            <i class="my_contact_info fa-solid fa-phone text-[#ff014f]"></i>
+                            <span class="hidden md:inline">+880 1700-968371</span>
+                        </a>
+
+                        <!-- Email -->
+                        <a href="mailto:mdshakilhossain720@gmail.com"
+                            class="flex items-center gap-2 text-[#3c3e41] hover:text-[#ff014f] transition">
+                            <i class="my_contact_info mt-1 fa-solid fa-envelope text-[#ff014f]"></i>
+                            <span class="hidden md:inline">mdshakilhossain720@gmail.com</span>
+                        </a>
+
+                    </div>
+
+                    <!-- Dark Mode -->
                     <button id="modeBtn" class="custom_btn !p-0">
                         <svg class="icon sun" viewBox="0 0 24 24">
                             <circle cx="12" cy="12" r="5"></circle>
@@ -178,12 +238,17 @@
                             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                         </svg>
                     </button>
+
+                    <!-- Contact Button -->
                     <a href="#contact" class="custom_btn w-max justify-center contact_me_btn">
                         Contact Me
                     </a>
+
+                    <!-- Mobile Menu -->
                     <a href="#" class="custom_btn justify-center p-0 w-12 rs-offcanvas-btn flex lg:hidden">
                         <i class="fa-solid fa-bars"></i>
                     </a>
+
                 </div>
             </div>
         </div>
@@ -217,7 +282,7 @@
                                 class="custom_btn" download>
                                 Download My CV
                             </a>
-                            <a href="#" class="custom_btn">
+                            <a href="#contact" class="custom_btn">
                                 Hire Me
                             </a>
                         </div>
@@ -231,15 +296,15 @@
                             About Me
                         </h2>
                         <p class="text-base text-[#3c3e41] font-medium mb-5">
-                            I am a cross-platform mobile application developer with 2 years of experience specializing
-                            in Flutter. I have successfully collaborated with teams and clients to understand business
-                            requirements and deliver tailored solutions. My portfolio includes e-commerce, LMS (Learning
-                            Management System), and Number One Laundry apps.
+                            Results-driven Flutter Developer with 2+ years of experience building high-performance,
+                            scalable cross-platform mobile applications. Strong expertise in Clean Architecture, REST
+                            API integration, and modern state management solutions like Riverpod and GetX.
                         </p>
 
                         <p class="text-base text-[#3c3e41] font-medium">
-                            I am committed to building high-quality, user-centric mobile applications that drive
-                            business growth.
+                            Proven ability to deliver production-ready apps in eCommerce, LMS, on-demand services,
+                            rental solutions, and travel promotion platforms. Passionate about writing clean code and
+                            creating seamless user experiences.
                         </p>
                     </div>
 
@@ -362,6 +427,227 @@
 
                     </div>
 
+                    <!-- Technical Skills -->
+                    <div class="info-box">
+                        <h2 class="text-[30px] text-primary font-bold mb-4 pb-4 border-b border-b-[#3c3e41]">
+                            Technical Skills
+                        </h2>
+
+                        <ul class="space-y-4">
+
+                            <li class="group">
+                                <div
+                                    class="text-base group-hover:text-primary text-[#3c3e41] font-medium flex items-start gap-2 transition-all duration-500">
+                                    <i
+                                        class="block w-2 h-2 rounded-full bg-[#b9b9b9] group-hover:bg-primary transition-all duration-500 mt-2"></i>
+                                    <span><b>Languages & Frameworks:</b> Dart, Flutter, C, Python</span>
+                                </div>
+                            </li>
+
+                            <li class="group">
+                                <div
+                                    class="text-base group-hover:text-primary text-[#3c3e41] font-medium flex items-start gap-2 transition-all duration-500">
+                                    <i
+                                        class="block w-2 h-2 rounded-full bg-[#b9b9b9] group-hover:bg-primary transition-all duration-500 mt-2"></i>
+                                    <span><b>Core:</b> OOP, Data Structures & Algorithms</span>
+                                </div>
+                            </li>
+
+                            <li class="group">
+                                <div
+                                    class="text-base group-hover:text-primary text-[#3c3e41] font-medium flex items-start gap-2 transition-all duration-500">
+                                    <i
+                                        class="block w-2 h-2 rounded-full bg-[#b9b9b9] group-hover:bg-primary transition-all duration-500 mt-2"></i>
+                                    <span><b>State Management:</b> Riverpod, GetX</span>
+                                </div>
+                            </li>
+
+                            <li class="group">
+                                <div
+                                    class="text-base group-hover:text-primary text-[#3c3e41] font-medium flex items-start gap-2 transition-all duration-500">
+                                    <i
+                                        class="block w-2 h-2 rounded-full bg-[#b9b9b9] group-hover:bg-primary transition-all duration-500 mt-2"></i>
+                                    <span><b>Architecture:</b> Clean Architecture, MVC, MVVM</span>
+                                </div>
+                            </li>
+
+                            <li class="group">
+                                <div
+                                    class="text-base group-hover:text-primary text-[#3c3e41] font-medium flex items-start gap-2 transition-all duration-500">
+                                    <i
+                                        class="block w-2 h-2 rounded-full bg-[#b9b9b9] group-hover:bg-primary transition-all duration-500 mt-2"></i>
+                                    <span><b>Design Patterns:</b> Repository, Singleton, Observer</span>
+                                </div>
+                            </li>
+
+                            <li class="group">
+                                <div
+                                    class="text-base group-hover:text-primary text-[#3c3e41] font-medium flex items-start gap-2 transition-all duration-500">
+                                    <i
+                                        class="block w-2 h-2 rounded-full bg-[#b9b9b9] group-hover:bg-primary transition-all duration-500 mt-2"></i>
+                                    <span><b>Backend:</b> REST APIs, Firebase</span>
+                                </div>
+                            </li>
+
+                            <li class="group">
+                                <div
+                                    class="text-base group-hover:text-primary text-[#3c3e41] font-medium flex items-start gap-2 transition-all duration-500">
+                                    <i
+                                        class="block w-2 h-2 rounded-full bg-[#b9b9b9] group-hover:bg-primary transition-all duration-500 mt-2"></i>
+                                    <span><b>Tools:</b> Git, GitHub, GitLab, Postman</span>
+                                </div>
+                            </li>
+
+                            <li class="group">
+                                <div
+                                    class="text-base group-hover:text-primary text-[#3c3e41] font-medium flex items-start gap-2 transition-all duration-500">
+                                    <i
+                                        class="block w-2 h-2 rounded-full bg-[#b9b9b9] group-hover:bg-primary transition-all duration-500 mt-2"></i>
+                                    <span><b>CI/CD:</b> GitHub Actions</span>
+                                </div>
+                            </li>
+
+                            <li class="group">
+                                <div
+                                    class="text-base group-hover:text-primary text-[#3c3e41] font-medium flex items-start gap-2 transition-all duration-500">
+                                    <i
+                                        class="block w-2 h-2 rounded-full bg-[#b9b9b9] group-hover:bg-primary transition-all duration-500 mt-2"></i>
+                                    <span><b>Deployment:</b> Play Store, App Store</span>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <!-- Soft Skills -->
+                    <div class="info-box">
+                        <h2 class="text-[30px] text-primary font-bold mb-4 pb-4 border-b border-b-[#3c3e41]">
+                            Soft Skills
+                        </h2>
+
+                        <ul class="space-y-4">
+
+                            <li class="group">
+                                <div
+                                    class="text-base group-hover:text-primary text-[#3c3e41] font-medium flex items-start gap-2 transition-all duration-500">
+                                    <i
+                                        class="block w-2 h-2 rounded-full bg-[#b9b9b9] group-hover:bg-primary transition-all duration-500 mt-2"></i>
+                                    Strong communication (English & Bangla)
+                                </div>
+                            </li>
+
+                            <li class="group">
+                                <div
+                                    class="text-base group-hover:text-primary text-[#3c3e41] font-medium flex items-start gap-2 transition-all duration-500">
+                                    <i
+                                        class="block w-2 h-2 rounded-full bg-[#b9b9b9] group-hover:bg-primary transition-all duration-500 mt-2"></i>
+                                    Problem-solving mindset
+                                </div>
+                            </li>
+
+                            <li class="group">
+                                <div
+                                    class="text-base group-hover:text-primary text-[#3c3e41] font-medium flex items-start gap-2 transition-all duration-500">
+                                    <i
+                                        class="block w-2 h-2 rounded-full bg-[#b9b9b9] group-hover:bg-primary transition-all duration-500 mt-2"></i>
+                                    Team collaboration
+                                </div>
+                            </li>
+
+                            <li class="group">
+                                <div
+                                    class="text-base group-hover:text-primary text-[#3c3e41] font-medium flex items-start gap-2 transition-all duration-500">
+                                    <i
+                                        class="block w-2 h-2 rounded-full bg-[#b9b9b9] group-hover:bg-primary transition-all duration-500 mt-2"></i>
+                                    Quick learner and adaptable
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <!-- my experience -->
+                    <div id="experience" class="info-box">
+                        <h2 class="text-[30px] text-primary font-bold mb-4 pb-4 border-b border-b-[#3c3e41]">
+                            Work Experience
+                        </h2>
+
+                        <h3 class="text-xl font-semibold text-[#1e2125]">
+                            Junior Software Engineer (Flutter Developer)
+                        </h3>
+
+                        <p class="text-sm text-gray-500 mb-4">
+                            Razinsoft Limited | Jan 2024 – Present
+                        </p>
+
+                        <ul class="space-y-4">
+
+                            <li class="group">
+                                <div
+                                    class="text-base group-hover:text-primary text-[#3c3e41] font-medium flex items-start gap-2 transition-all duration-500">
+                                    <i
+                                        class="block w-2 h-2 rounded-full bg-[#b9b9b9] group-hover:bg-primary transition-all duration-500 mt-2"></i>
+                                    Developed and maintained multiple production-level Flutter applications
+                                </div>
+                            </li>
+
+                            <li class="group">
+                                <div
+                                    class="text-base group-hover:text-primary text-[#3c3e41] font-medium flex items-start gap-2 transition-all duration-500">
+                                    <i
+                                        class="block w-2 h-2 rounded-full bg-[#b9b9b9] group-hover:bg-primary transition-all duration-500 mt-2"></i>
+                                    Implemented Clean Architecture & MVVM
+                                </div>
+                            </li>
+
+                            <li class="group">
+                                <div
+                                    class="text-base group-hover:text-primary text-[#3c3e41] font-medium flex items-start gap-2 transition-all duration-500">
+                                    <i
+                                        class="block w-2 h-2 rounded-full bg-[#b9b9b9] group-hover:bg-primary transition-all duration-500 mt-2"></i>
+                                    Integrated REST APIs and Firebase (Auth, Firestore, Notifications)
+                                </div>
+                            </li>
+
+                            <li class="group">
+                                <div
+                                    class="text-base group-hover:text-primary text-[#3c3e41] font-medium flex items-start gap-2 transition-all duration-500">
+                                    <i
+                                        class="block w-2 h-2 rounded-full bg-[#b9b9b9] group-hover:bg-primary transition-all duration-500 mt-2"></i>
+                                    Used Riverpod and GetX for state management
+                                </div>
+                            </li>
+
+                            <li class="group">
+                                <div
+                                    class="text-base group-hover:text-primary text-[#3c3e41] font-medium flex items-start gap-2 transition-all duration-500">
+                                    <i
+                                        class="block w-2 h-2 rounded-full bg-[#b9b9b9] group-hover:bg-primary transition-all duration-500 mt-2"></i>
+                                    Collaborated with designers and backend developers
+                                </div>
+                            </li>
+
+                            <li class="group">
+                                <div
+                                    class="text-base group-hover:text-primary text-[#3c3e41] font-medium flex items-start gap-2 transition-all duration-500">
+                                    <i
+                                        class="block w-2 h-2 rounded-full bg-[#b9b9b9] group-hover:bg-primary transition-all duration-500 mt-2"></i>
+                                    Improved app performance and reduced bugs
+                                </div>
+                            </li>
+
+                            <li class="group">
+                                <div
+                                    class="text-base group-hover:text-primary text-[#3c3e41] font-medium flex items-start gap-2 transition-all duration-500">
+                                    <i
+                                        class="block w-2 h-2 rounded-full bg-[#b9b9b9] group-hover:bg-primary transition-all duration-500 mt-2"></i>
+                                    Published apps on Play Store & App Store
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+
                     <!-- My Services -->
                     <div id="services" class="info-box">
                         <h2 class="text-[30px] text-primary  font-bold mb-4 pb-4 border-b border-b-[#3c3e41]">
@@ -417,46 +703,56 @@
                             My Portfolio
                         </h2>
                         <ul class="space-y-4">
+
                             <li class="group">
-                                <a href="#"
+                                <a href="https://play.google.com/store/apps/details?id=com.readygrocery" target="_blank"
                                     class="text-lg group-hover:text-primary text-[#5c5f62] font-normal flex items-center gap-2 transition-all duration-500">
+
                                     <i
                                         class="block w-2 h-2 rounded-full bg-[#b9b9b9] group-hover:bg-primary transition-all duration-500"></i>
-                                    Provite for Design & Development
-                                    <i
-                                        class="fa-solid fa-arrow-right mt-1 text-primary transition-all duration-500 -translate-x-[11px] scale-50  opacity-0 invisible group-hover:opacity-[1] group-hover:visible group-hover:translate-x-0 group-hover:scale-100"></i>
+
+                                    Ready Grocery App (Live)
+
+                                    <i class="fa-solid fa-arrow-right mt-1 text-primary transition-all duration-500 
+                                    -translate-x-[11px] scale-50 opacity-0 invisible 
+                                    group-hover:opacity-[1] group-hover:visible 
+                                    group-hover:translate-x-0 group-hover:scale-100"></i>
                                 </a>
                             </li>
+
                             <li class="group">
-                                <a href="#"
+                                <a href="https://play.google.com/store/apps/details?id=come.bridgeplus" target="_blank"
                                     class="text-lg group-hover:text-primary text-[#5c5f62] font-normal flex items-center gap-2 transition-all duration-500">
+
                                     <i
                                         class="block w-2 h-2 rounded-full bg-[#b9b9b9] group-hover:bg-primary transition-all duration-500"></i>
-                                    Team frequently in retailing
-                                    <i
-                                        class="fa-solid fa-arrow-right mt-1 text-primary transition-all duration-500 -translate-x-[11px] scale-50  opacity-0 invisible group-hover:opacity-[1] group-hover:visible group-hover:translate-x-0 group-hover:scale-100"></i>
+
+                                    Bridge Plus App (Live)
+
+                                    <i class="fa-solid fa-arrow-right mt-1 text-primary transition-all duration-500 
+                                    -translate-x-[11px] scale-50 opacity-0 invisible 
+                                    group-hover:opacity-[1] group-hover:visible 
+                                    group-hover:translate-x-0 group-hover:scale-100"></i>
                                 </a>
                             </li>
+
                             <li class="group">
-                                <a href="#"
+                                <a href="https://play.google.com/store/apps/details?id=com.razinsoft.luandry.app"
+                                    target="_blank"
                                     class="text-lg group-hover:text-primary text-[#5c5f62] font-normal flex items-center gap-2 transition-all duration-500">
+
                                     <i
                                         class="block w-2 h-2 rounded-full bg-[#b9b9b9] group-hover:bg-primary transition-all duration-500"></i>
-                                    App Development
-                                    <i
-                                        class="fa-solid fa-arrow-right mt-1 text-primary transition-all duration-500 -translate-x-[11px] scale-50  opacity-0 invisible group-hover:opacity-[1] group-hover:visible group-hover:translate-x-0 group-hover:scale-100"></i>
+
+                                    Laundry Service App (Live)
+
+                                    <i class="fa-solid fa-arrow-right mt-1 text-primary transition-all duration-500 
+                                    -translate-x-[11px] scale-50 opacity-0 invisible 
+                                    group-hover:opacity-[1] group-hover:visible 
+                                    group-hover:translate-x-0 group-hover:scale-100"></i>
                                 </a>
                             </li>
-                            <li class="group">
-                                <a href="#"
-                                    class="text-lg group-hover:text-primary text-[#5c5f62] font-normal flex items-center gap-2 transition-all duration-500">
-                                    <i
-                                        class="block w-2 h-2 rounded-full bg-[#b9b9b9] group-hover:bg-primary transition-all duration-500"></i>
-                                    Service to a customer.
-                                    <i
-                                        class="fa-solid fa-arrow-right mt-1 text-primary transition-all duration-500 -translate-x-[11px] scale-50  opacity-0 invisible group-hover:opacity-[1] group-hover:visible group-hover:translate-x-0 group-hover:scale-100"></i>
-                                </a>
-                            </li>
+
                         </ul>
                     </div>
 
@@ -863,6 +1159,7 @@
 
     <!-- script link -->
     <script src="./js/img-move.js"></script>
+    <script src="./js/scrool-to-top.js"></script>
 
     <!-- typed cdn -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>

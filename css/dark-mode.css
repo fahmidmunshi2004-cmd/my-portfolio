@@ -51,6 +51,8 @@ body.dark .custom_btn::after {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
 }
 
+body.dark .my_contact_info,
+body.dark .scrollToTop,
 body.dark #modeBtn,
 body.dark .input-box textarea,
 body.dark .input-box input,
@@ -60,6 +62,11 @@ body.dark .info-box {
     background: rgb(29, 28, 28);
     color: #fff;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+body.dark .scrollToTop .arrowUp i {
+    font-size: 19px;
+    color: #fff;
 }
 
 
